@@ -245,8 +245,9 @@ _vec setVariable ["d_WreckMaxRepair", d_WreckMaxRepair, true];
 [_vec, 11] call d_fnc_setekmode;
 _vec spawn {
 	scriptName "spawn getbonus2";
-	sleep 10;
+	sleep 30;
 	_this allowDamage true;
+	_this lock false;
 };
 #else
 private _vec2 = objNull;
@@ -336,8 +337,9 @@ _vec setVariable ["d_WreckMaxRepair", d_WreckMaxRepair, true];
 [_vec, 11] call d_fnc_setekmode;
 _vec spawn {
 	scriptName "spawn getbonus3";
-	sleep 10;
+	sleep 30;
 	_this allowDamage true;
+	_this lock false;
 };
 if (isNil {_vec getVariable "d_cwcg_inited"}) then {
 	if (d_with_ranked) then {
@@ -369,8 +371,9 @@ if (!isNull _vec2) then {
 	[_vec2, 11] call d_fnc_setekmode;
 	_vec2 spawn {
 		scriptName "spawn getbonus4";
-		sleep 10;
+		sleep 30;
 		_this allowDamage true;
+		_this lock false;
 	};
 	if (isNil {_vec2 getVariable "d_cwcg_inited"}) then {
 		if (d_with_ranked) then {
